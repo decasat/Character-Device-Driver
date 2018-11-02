@@ -2,7 +2,7 @@
 *	Filename: lab1_chr.c 
 * 
 *	Description: character drvier demo 1
-*	programmer: Sateesh Kumar G <contact@sateeshkg.com>
+*	programmer: Sateesh Kumar G
 *	date begun: 04 DEC 2017
 \*********************************************************************/
 
@@ -102,5 +102,5 @@ module_init(char_sk_init);
 module_exit(char_sk_exit);
 
 MODULE_LICENSE("GPL");
-MODULE_AUTHOR("SATEESH KG <contact@sateeshkg.com>");
+MODULE_AUTHOR("SATEESH KG ");
 MODULE_DESCRIPTION("Details: character driver demo");
