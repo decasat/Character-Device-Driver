@@ -1,1 +1,6 @@
+Note: This folder contains Character Device Driver files
+you can use my quick compiler script to compile modules.
+With out the .c extension.
+
+qc <module_name>
 
