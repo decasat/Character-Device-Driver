@@ -1,9 +1,10 @@
 /************************************************************************\
- * Description: Dynamic way of creating device file 			*
+ * Description: Dynamic way of creating device file 	
+ * Author : Sateesh KG
  * File name : lab5_chr_dev_udev.c					*
  * compilation: use our qc script					*
- * 		./qc lab4_chr_dev_udev					*
- *     		insmod lab4_chr_dev_udev.ko				*
+ * 		./qc lab5_chr_dev_udev					*
+ *     		insmod lab5_chr_dev_udev.ko				*
  *     									*
  * Invoking driver with our test_application.c				*
  * 		./test-appl
@@ -42,10 +43,6 @@ static int sk_open(struct inode *inode, struct file  *file)
 		return -EBUSY; /* already open */
 	}
 
-	printk(KERN_INFO "Number of times open() was called: %d\n", atomic_read(&device_available));
-	printk (KERN_INFO " MAJOR number = %d, MINOR number = %d\n",imajor (inode), iminor (inode));
-	printk(KERN_INFO "Process id of the current process: %d\n",current->pid ); 
-	printk(KERN_INFO "Process name of the current process: %s\n",current->comm);
 	printk (KERN_INFO "ref=%d\n", module_refcount(THIS_MODULE));
 	return SUCCESS;
 }
